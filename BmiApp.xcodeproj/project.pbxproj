@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE32A7282AC08CB000F79950 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE32A7272AC08CB000F79950 /* Toast.swift */; };
 		BED20D092ABE10CA005626F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED20D082ABE10CA005626F1 /* AppDelegate.swift */; };
 		BED20D0B2ABE10CA005626F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED20D0A2ABE10CA005626F1 /* SceneDelegate.swift */; };
 		BED20D0D2ABE10CA005626F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED20D0C2ABE10CA005626F1 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE32A7272AC08CB000F79950 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		BED20D052ABE10CA005626F1 /* BmiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BmiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED20D082ABE10CA005626F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED20D0A2ABE10CA005626F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		BED20D072ABE10CA005626F1 /* BmiApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE32A7272AC08CB000F79950 /* Toast.swift */,
 				BED20D082ABE10CA005626F1 /* AppDelegate.swift */,
 				BED20D0A2ABE10CA005626F1 /* SceneDelegate.swift */,
 				BED20D0C2ABE10CA005626F1 /* ViewController.swift */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED20D0D2ABE10CA005626F1 /* ViewController.swift in Sources */,
+				BE32A7282AC08CB000F79950 /* Toast.swift in Sources */,
 				BED20D092ABE10CA005626F1 /* AppDelegate.swift in Sources */,
 				BED20D0B2ABE10CA005626F1 /* SceneDelegate.swift in Sources */,
 			);
@@ -295,7 +299,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BmiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -322,7 +326,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BmiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
