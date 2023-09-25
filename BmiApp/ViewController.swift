@@ -98,6 +98,8 @@ class ViewController: UIViewController {
     }
     
     
+    
+   
     @IBAction func txtHeightEditingChanged(_ sender: Any) {
         
         lblResultBmi.isHidden = true
@@ -107,7 +109,6 @@ class ViewController: UIViewController {
         
         lblResultBmi.isHidden = true
     }
-    
     
     
 }
