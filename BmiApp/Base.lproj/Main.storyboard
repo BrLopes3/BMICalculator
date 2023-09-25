@@ -34,7 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="txtHeightEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="x1S-ib-yN0"/>
+                                    <action selector="txtInputEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="cOh-ou-7d4"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Weight in kg" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KfM-zK-dOD">
@@ -43,7 +43,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="txtWeightEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="U8M-qr-QA6"/>
+                                    <action selector="txtInputEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="MyZ-QR-Pzz"/>
+                                    <action selector="txtInputEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="V09-Uf-apE"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51k-Ly-gBD">
@@ -70,7 +71,7 @@
                                     <backgroundConfiguration key="background"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="btnCalculateTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ni-JF-lbX"/>
+                                    <action selector="btnCalculateTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EST-8Q-1ro"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mat-nL-xkB">
@@ -86,6 +87,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="btnCalculate" destination="4v0-Hq-1Ue" id="qAF-CS-3AV"/>
                         <outlet property="lblResultBmi" destination="Mat-nL-xkB" id="9Bf-VC-Nic"/>
                         <outlet property="txtHeightInCm" destination="SY2-Uh-LOY" id="gX5-3P-aoQ"/>
                         <outlet property="txtWeightInKg" destination="KfM-zK-dOD" id="Ibo-Xk-ijv"/>

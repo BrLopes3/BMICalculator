@@ -50,14 +50,23 @@ class ViewController: UIViewController {
         switch bmiCalculated {
         case 0.0..<18.5:
             classification = "Underweight"
+            lblResultBmi.backgroundColor = .systemBlue
+            break
         case 18.5..<25.0:
             classification = "Normal weight"
+            lblResultBmi.backgroundColor = .systemGreen
+            break
         case 25.0..<30.0:
             classification = "Overweight"
+            lblResultBmi.backgroundColor = .systemYellow
+            break
         case 30.0...(100.0):
             classification = "Obesity"
+            lblResultBmi.backgroundColor = .systemOrange
+            break
         default:
             classification = "Invalid BMI"
+            lblResultBmi.backgroundColor = .systemRed
         }
         
         return classification
@@ -79,15 +88,15 @@ class ViewController: UIViewController {
         let bmiCorrected = myRound(number: bmiCalculated)
         let classification = classification(bmiCalculated: bmiCorrected)
         
-        let backgroundColors: [String: UIColor] = [
+     /*   let backgroundColors: [String: UIColor] = [
             "Underweight": .systemBlue,
             "Normal weight": .systemGreen,
             "Overweight": .systemYellow,
             "Obesity": .systemOrange
-        ]
+        ]*/
         
-        lblResultBmi.text = classification
-        lblResultBmi.backgroundColor = backgroundColors[classification]
+        lblResultBmi.text = "BMI Classification = \(classification)"
+      //  lblResultBmi.backgroundColor = backgroundColors[classification]
         lblResultBmi.isHidden = false
     }
     
@@ -95,17 +104,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         lblResultBmi.isHidden = true
+        btnCalculate.layer.cornerRadius = 15
     }
     
+    @IBOutlet weak var btnCalculate: UIButton!
     
-    
-   
-    @IBAction func txtHeightEditingChanged(_ sender: Any) {
-        
-        lblResultBmi.isHidden = true
-    }
-    
-    @IBAction func txtWeightEditingChanged(_ sender: Any) {
+    @IBAction func txtInputEditingChanged(_ sender: Any) {
         
         lblResultBmi.isHidden = true
     }
