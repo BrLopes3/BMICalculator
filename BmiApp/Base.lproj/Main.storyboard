@@ -33,18 +33,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="txtHeightEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="x6L-sC-1uP"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Weight in kg" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KfM-zK-dOD">
                                 <rect key="frame" x="113" y="510" width="167" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="txtWeightEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="PmJ-6M-ukb"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51k-Ly-gBD">
                                 <rect key="frame" x="113" y="350" width="167" height="39"/>
@@ -87,8 +81,8 @@
                     </view>
                     <connections>
                         <outlet property="lblResultBmi" destination="Mat-nL-xkB" id="9Bf-VC-Nic"/>
-                        <outlet property="txtHeightInCm" destination="SY2-Uh-LOY" id="BtC-iS-7We"/>
-                        <outlet property="txtWeightInKg" destination="KfM-zK-dOD" id="06W-Bc-YR2"/>
+                        <outlet property="txtHeightInCm" destination="SY2-Uh-LOY" id="gX5-3P-aoQ"/>
+                        <outlet property="txtWeightInKg" destination="KfM-zK-dOD" id="Ibo-Xk-ijv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

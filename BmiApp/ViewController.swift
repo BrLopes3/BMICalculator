@@ -64,75 +64,40 @@ class ViewController: UIViewController {
     }
     
     
-    
     @IBAction func btnCalculateTouchUpInside(_ sender: Any) {
-        
-        if let heightInCm = Double(txtHeightInCm.text!){
-            
-            if (heightInCm<80 || heightInCm>250){
-                
-                Toast.ok(view: self, title: "Review the height", message: "Enter a height between 80 cm and 250 cm.")
-                
-                return
-                
-            }else{
-                
-                if let weightInKg = Double(txtWeightInKg.text!){
-                    
-                    if (weightInKg<30 || weightInKg>300){
-                        
-                        Toast.ok(view: self, title: "Review the weight", message: "Enter a weight between 30 kg and 300 kg.")
-                        
-                        return
-                        
-                    }else{
-                        
-                        let bmiCalculated = calculateBmi(weightInKg: weightInKg, heightInCm: heightInCm)
-                        
-                        let bmiCorrected = myRound(number: bmiCalculated)
-                        
-                        let classification = classification(bmiCalculated: bmiCorrected)
-                        
-                        let backgroundColors: [String: UIColor] = [
-                            "Underweight": .systemBlue,
-                            "Normal weight": .systemGreen,
-                            "Overweight": .systemYellow,
-                            "Obesity": .systemOrange
-                        ]
-                        
-                        lblResultBmi.text = classification
-                        
-                        lblResultBmi.backgroundColor = backgroundColors[classification]
-                        
-                        lblResultBmi.isHidden = false
-                        
-                    }
-                }else{
-                    
-                    Toast.ok(view: self, title: "Review the weight", message: "Enter a valid weight.")
-                    
-                    return
-                    
-                }
-            }
-        }else{
-            
-            Toast.ok(view: self, title: "Review the height", message: "Enter a valid height.")
-            
+        guard let heightInCm = Double(txtHeightInCm.text!), (80...250).contains(heightInCm) else {
+            Toast.ok(view: self, title: "Review the height", message: "Enter a height between 80 cm and 250 cm.")
             return
-            
         }
-   
-         
-}
         
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            // Do any additional setup after loading the view.
-            lblResultBmi.isHidden = true
+        guard let weightInKg = Double(txtWeightInKg.text!), (30...300).contains(weightInKg) else {
+            Toast.ok(view: self, title: "Review the weight", message: "Enter a weight between 30 kg and 300 kg.")
+            return
         }
+        
+        let bmiCalculated = calculateBmi(weightInKg: weightInKg, heightInCm: heightInCm)
+        let bmiCorrected = myRound(number: bmiCalculated)
+        let classification = classification(bmiCalculated: bmiCorrected)
+        
+        let backgroundColors: [String: UIColor] = [
+            "Underweight": .systemBlue,
+            "Normal weight": .systemGreen,
+            "Overweight": .systemYellow,
+            "Obesity": .systemOrange
+        ]
+        
+        lblResultBmi.text = classification
+        lblResultBmi.backgroundColor = backgroundColors[classification]
+        lblResultBmi.isHidden = false
+    }
     
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        lblResultBmi.isHidden = true
+    }
+    
+    
     @IBAction func txtHeightEditingChanged(_ sender: Any) {
         
         lblResultBmi.isHidden = true
@@ -143,7 +108,7 @@ class ViewController: UIViewController {
         lblResultBmi.isHidden = true
     }
     
-        
-        
-    }
+    
+    
+}
 
